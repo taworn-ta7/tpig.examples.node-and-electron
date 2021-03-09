@@ -1,6 +1,6 @@
 'use strict'
 const path = require('path')
-const Config = require('merge-config')
+const Config = require('merge-config-ex')
 const config = new Config()
 
 config.file(path.join(__dirname, 'config.yaml'))

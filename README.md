@@ -1,6 +1,6 @@
 # Node and Electron
 
-Node and electron.
+Node and Electron.
 
 ## Requirements
 
@@ -10,6 +10,8 @@ Node and electron.
 ## Thank You
 
 * electron, https://www.electronjs.org
+* react, https://reactjs.org
+* create-react-electron-app, https://github.com/soulehshaikh99/create-react-electron-app
 * winston, https://github.com/winstonjs/winston
 * gitignore, https://github.com/github/gitignore and https://gitignore.io
 * and other modules

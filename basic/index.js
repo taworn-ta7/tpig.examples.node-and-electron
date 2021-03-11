@@ -1,9 +1,23 @@
 'use strict'
 const { app, BrowserWindow, Menu } = require('electron')
+const i18next = require('i18next')
+const Backend = require('i18next-fs-backend')
+const path = require('path')
 const config = require('./configs')
 const { logger } = require('./libs')
 
-function createWindow() {
+const createWindow = async () => {
+    await i18next.use(Backend).init({
+        fallbackLng: 'en',
+        lng: 'th',
+        preload: ['en', 'th'],
+        ns: ['translations'],
+        defaultNS: 'translations',
+        backend: {
+            loadPath: path.join(__dirname, 'locales', '{{lng}}', '{{ns}}.json')
+        }
+    })
+
     const window = new BrowserWindow({
         width: 700,
         height: 500,
@@ -14,10 +28,10 @@ function createWindow() {
 
     const template = [
         {
-            label: 'File',
+            label: i18next.t('File'),
             submenu: [
                 {
-                    label: 'Exit',
+                    label: i18next.t('Exit'),
                     click() {
                         logger.verbose(`File => Exit`)
                         app.emit('command-exit', "I quit. :)")
@@ -26,10 +40,10 @@ function createWindow() {
             ]
         },
         {
-            label: 'Help',
+            label: i18next.t('Help'),
             submenu: [
                 {
-                    label: 'About',
+                    label: i18next.t('About'),
                     click() {
                         logger.verbose(`Help => About`)
                     }

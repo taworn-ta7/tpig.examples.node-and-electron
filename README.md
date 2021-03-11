@@ -12,6 +12,7 @@ Node and Electron.
 * electron, https://www.electronjs.org
 * react, https://reactjs.org
 * create-react-electron-app, https://github.com/soulehshaikh99/create-react-electron-app
+* i18next, https://www.i18next.com
 * winston, https://github.com/winstonjs/winston
 * gitignore, https://github.com/github/gitignore and https://gitignore.io
 * and other modules

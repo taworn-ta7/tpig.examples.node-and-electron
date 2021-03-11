@@ -9,7 +9,7 @@ const { logger } = require('./libs')
 const createWindow = async () => {
     await i18next.use(Backend).init({
         fallbackLng: 'en',
-        lng: 'th',
+        lng: 'en',
         preload: ['en', 'th'],
         ns: ['translations'],
         defaultNS: 'translations',
@@ -17,6 +17,7 @@ const createWindow = async () => {
             loadPath: path.join(__dirname, 'locales', '{{lng}}', '{{ns}}.json')
         }
     })
+    await i18next.changeLanguage('th')
 
     const window = new BrowserWindow({
         width: 700,

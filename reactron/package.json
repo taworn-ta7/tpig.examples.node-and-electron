@@ -36,6 +36,8 @@
   },
   "dependencies": {
     "electron-serve": "^1.0.0",
+    "i18next": "^19.9.2",
+    "react-i18next": "^11.8.9",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
   },
